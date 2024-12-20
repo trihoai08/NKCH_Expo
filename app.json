@@ -13,16 +13,35 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Ứng dụng cần quyền truy cập camera"
+      }
     },
     "android": {
+      "permission": [
+        "CAMERA"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.trihoai08.nckh_app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "entryPoint": "./src/App.tsx",
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "34e5d893-8c4c-4dca-8d5a-e91faa7b7716"
+      }
     }
   }
 }
